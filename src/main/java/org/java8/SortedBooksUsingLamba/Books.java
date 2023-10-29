@@ -5,13 +5,26 @@ import java.util.Objects;
 
 public class Books {
 
-    public Books(int bookNo, String bookName) {
-        this.bookNo = bookNo;
-        this.bookName = bookName;
+    private Long bookNo;
+    private String bookName;
+    private int bookPages;
+
+    public Long getBookNo() {
+        return bookNo;
     }
 
-    public int getBookNo() {
-        return bookNo;
+    public String getBookName() {
+        return bookName;
+    }
+
+    public int getBookPages() {
+        return bookPages;
+    }
+
+    public Books(Long bookNo, String bookName, int bookPages) {
+        this.bookNo = bookNo;
+        this.bookName = bookName;
+        this.bookPages = bookPages;
     }
 
     @Override
@@ -19,34 +32,7 @@ public class Books {
         return "Books{" +
                 "bookNo=" + bookNo +
                 ", bookName='" + bookName + '\'' +
+                ", bookPages=" + bookPages +
                 '}';
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Books books = (Books) o;
-        return bookNo == books.bookNo && Objects.equals(bookName, books.bookName);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(bookNo, bookName);
-    }
-
-    public void setBookNo(int bookNo) {
-        this.bookNo = bookNo;
-    }
-
-    public String getBookName() {
-        return bookName;
-    }
-
-    public void setBookName(String bookName) {
-        this.bookName = bookName;
-    }
-
-    private int bookNo;
-    private String bookName;
 }

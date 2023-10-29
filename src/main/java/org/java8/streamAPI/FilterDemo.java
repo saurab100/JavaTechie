@@ -27,6 +27,8 @@ public class FilterDemo {
         //using stream API Filter method to add conditions
         list.stream().filter((t) -> t.startsWith("P")).forEach(t -> System.out.println(t));
 
+
+
         Map<Integer, String> map = new HashMap<>();
         map.put(1, "Saurabh");
         map.put(2, "Reek");

@@ -5,11 +5,11 @@ import java.util.List;
 
 public class BooksDAO {
 
-    public List<Books> getBooks() {
+    public static List<Books> getBooks() {
         List<Books> books = new ArrayList<>();
-        books.add(new Books(101, "Azkaban"));
-        books.add(new Books(99, "Chambers of Secret"));
-        books.add(new Books(103, "Halloween"));
+        books.add(new Books(101L, "Azkaban", 1000));
+        books.add(new Books(999L, "Chambers of Secret", 5000));
+        books.add(new Books(103L, "Halloween", 500));
         return books;
     }
 
