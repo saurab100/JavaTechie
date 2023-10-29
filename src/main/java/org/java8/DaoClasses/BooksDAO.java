@@ -1,4 +1,4 @@
-package org.java8.SortedBooksUsingLamba;
+package org.java8.DaoClasses;
 
 import java.util.ArrayList;
 import java.util.List;

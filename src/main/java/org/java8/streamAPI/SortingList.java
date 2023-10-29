@@ -1,11 +1,9 @@
 package org.java8.streamAPI;
 
-import org.java8.SortedBooksUsingLamba.Books;
-import org.java8.SortedBooksUsingLamba.BooksDAO;
+import org.java8.DaoClasses.Books;
+import org.java8.DaoClasses.BooksDAO;
 
-import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class SortingList {
