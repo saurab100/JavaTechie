@@ -1,5 +1,7 @@
 package org.CoreJava.Strings;
 
+import java.util.*;
+
 public class PrintEvenWords {
 
     public static void main(String[] args) {
@@ -21,5 +23,42 @@ public class PrintEvenWords {
         System.out.println(s3);*/
 
 
+        /*3. Palindrome
+        String s = "NitiN";
+        int i = 0;
+        int j = s.length() - 1;
+        while (i <= j) {
+            if (s.charAt(i) != s.charAt(j)) {
+                System.out.println(s.charAt(i));
+                System.out.println("No");
+            }
+            i++;
+            j--;
+        }
+        System.out.println("Yes");*/
+
+        //4. Reverse a String
+
+        /*String s = "ABCD";
+        StringBuffer s1 = new StringBuffer() ;
+        for (int i = s.length()-1; i >= 0 ;i--){
+            s1.append(s.charAt(i));
+        }
+        System.out.println(s1);*/
+
+        /*String s = "ABCD", s2 = "";
+        char c;
+        for (int i = 0; i <= s.length()-1 ;i++){
+            c = s.charAt(i);
+            s2 = c+s2;
+        }
+        System.out.println(s2);*/
+
+        //5. Sort a String
+
+        String s = "saurabh";
+        char s2[] = s.toCharArray();
+        Arrays.sort(s2);
+        System.out.println(new String(s2));
     }
 }
