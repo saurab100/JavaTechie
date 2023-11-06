@@ -56,9 +56,28 @@ public class PrintEvenWords {
 
         //5. Sort a String
 
-        String s = "saurabh";
+        /*String s = "saurabh";
         char s2[] = s.toCharArray();
         Arrays.sort(s2);
-        System.out.println(new String(s2));
+        System.out.println(new String(s2));*/
+
+        //6. Compare two strings
+
+        /*String s1 = "Aakash";
+        String s2 = "Saurabh";
+        System.out.println(s1.compareToIgnoreCase(s2));*/
+
+        //7. Remove leading Zeros
+        String s = "00000123569";
+        String s2 = "";
+        for(int i = 0; i<= s.length()-1; i++){
+            //System.out.println(s.charAt(i));
+            if (s.charAt(i) != '0'){
+                s2 = s.substring(i);
+                break;
+            }
+        }
+        System.out.println(s2);
+
     }
 }

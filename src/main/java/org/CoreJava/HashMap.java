@@ -19,5 +19,6 @@ public class HashMap {
             }
         }
         System.out.println(map);
+
     }
 }

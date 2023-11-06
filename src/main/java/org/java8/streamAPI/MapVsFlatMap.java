@@ -32,5 +32,6 @@ public class MapVsFlatMap {
                 flatMap(customer -> customer.getPhoneNumbers().stream()).
                 collect(Collectors.toList());
         System.out.println(phones);
+
     }
 }
