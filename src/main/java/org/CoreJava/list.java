@@ -40,5 +40,18 @@ public class list {
         using java 8
         List<Integer> list1 = list.stream().distinct().collect(Collectors.toList());
         System.out.println(list1);*/
+
+        //3. sort an ArrayList in Ascending Order
+        /*List<Integer> list = new ArrayList<>(Arrays.asList(1,7,3,5,8,2,1,4));
+
+        Collections.sort(list, (o1,o2) -> o2.compareTo(o1));
+        list.stream().sorted((o1,o2) -> o2.compareTo(o1)).collect(Collectors.toList()).forEach(System.out::println);*/
+
+        //4. Convert a List of String to a comma separated String in Java
+
+        List<String> list = new ArrayList<>(Arrays.asList("saurabh","saxena","newport"));
+        String s = String.join(",", list);
+        System.out.println(s);
+
     }
 }
