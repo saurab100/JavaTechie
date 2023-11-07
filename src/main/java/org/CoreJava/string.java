@@ -1,8 +1,6 @@
-package org.CoreJava.Strings;
+package org.CoreJava;
 
-import java.util.*;
-
-public class PrintEvenWords {
+public class string {
 
     public static void main(String[] args) {
 
