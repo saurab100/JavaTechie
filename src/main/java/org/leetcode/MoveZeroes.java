@@ -1,28 +1,24 @@
 package org.leetcode;
 
+import java.util.Arrays;
+
 public class MoveZeroes {
 
-    public void moveZeroes(int[] nums) {
-        // int j = 0;
-        // for(int i = 0; i <= nums.length-1; i++ ){
-        //     if(nums[i] != 0){
-        //         int temp = nums[i];
-        //         nums[i] = nums[j];
-        //         nums[j] = temp;
-        //         j++;
-        //     }
-        // }
+    public static void main(String[] args) {
 
-        int i = 0;
-        for (int num : nums) {
-            if (num != 0) {
-                nums[i] = num;
-                i++;
-            }
+        int[] nums = new int[5];
+        nums[0] = 1;
+        nums[1] = 2;
+        nums[2] = 3;
+        nums[3] = 4;
+        nums[4] = 5;
+
+        String first = "";
+        String sec;
+        for(int i = 0; i <= nums.length - 1; i = i+2){
+            first += String.valueOf(nums[i]);
         }
-        while (i < nums.length) {
-            nums[i] = 0;
-            i++;
-        }
-    }
+        System.out.println(first);
+
+}
 }

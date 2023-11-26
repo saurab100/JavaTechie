@@ -49,9 +49,12 @@ public class list {
 
         //4. Convert a List of String to a comma separated String in Java
 
-        List<String> list = new ArrayList<>(Arrays.asList("saurabh","saxena","newport"));
-        String s = String.join(",", list);
-        System.out.println(s);
-
+        List<Integer> list = new ArrayList<>(Arrays.asList(2,4,5,6));
+        list.removeAll(list);
+        List<Integer> list1 = new ArrayList<>(Arrays.asList(3,6,7,8));
+        for(int e: list1){
+            list.add(e);
+        }
+        System.out.println(list);
     }
 }
