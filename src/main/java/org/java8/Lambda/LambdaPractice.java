@@ -74,6 +74,22 @@ public class LambdaPractice {
         System.out.println(result);
 
         //9. Write a Java program to implement a lambda expression to create a lambda expression to check if a number is prime.
+        Predicate<Integer> isprime = p -> {
+            for (int i =2; i<= Math.sqrt(p); i++){
+                if(p%i == 0){
+                    return false;
+                }
+            }
+            return true;
+        };
+        int p = 5;
+        boolean primeResult = isprime.test(p);
+        System.out.println(primeResult);
 
+        //10. Write a Java program to implement a lambda expression to concatenate two strings.
+        BiFunction<String, String, String> biFunction = (o1,o2) -> o1.concat(o2);
+        String s1 = "Saurbah";
+        String s2 = "SaXENA";
+        System.out.println(biFunction.apply(s1,s2));
     }
 }
