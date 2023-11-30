@@ -4,16 +4,19 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.function.IntBinaryOperator;
-import java.util.function.Predicate;
+import java.util.function.*;
 import java.util.stream.Collectors;
 
 public class LambdaPractice {
 
     public static void main(String[] args) {
 
-        //. Write a Java program to implement a lambda expression to find the sum of two integers.
+        //1. Write a Java program to implement a lambda expression to find the sum of two integers.
         Student sum = (a, b) -> a + b;
+
+        //2. Write a Java program to implement a lambda expression to check if a given string is empty
+       /* Predicate predicate = i -> i.isEmpty();
+        System.out.println("String 1 is empty: " + predicate.test("a"));*/
 
         //3. Write a Java program to implement a lambda expression to convert a list of strings to uppercase and lowercase.
         List<String> list = Arrays.asList("saurabh", "saxena");
@@ -29,7 +32,7 @@ public class LambdaPractice {
 
 
         // ****************************************************//
-        // Write a Java program to implement a lambda expression to filter out even and odd numbers from a list of integers
+        // 4. Write a Java program to implement a lambda expression to filter out even and odd numbers from a list of integers
         List<Integer> list2 = Arrays.asList(1,2,3,4,5);
         List newList = list2.stream().filter(i -> i%2 != 0).collect(Collectors.toList());
         for(Object s: newList){
@@ -53,5 +56,24 @@ public class LambdaPractice {
         //6. Write a Java program to implement a lambda expression to find the average of a list of doubles.
         List<Integer> list4 = Arrays.asList(1,2,3,4,5);
         list4.stream().mapToInt(i -> i).average().ifPresent(avg -> System.out.println(avg));
+
+        //7. Write a Java program to implement a lambda expression to remove duplicates from a list of integers.
+        List<Integer> list5 = Arrays.asList(1,1,3,3,3,6,7,8,6,5,5,5,7,7);
+        list5.stream().distinct().collect(Collectors.toList()).forEach(System.out::println);
+
+        //8. Write a lambda expression to implement a lambda expression to calculate the factorial of a given number.
+        IntUnaryOperator f = n -> {
+            int result = 1;
+            for(int i= 1; i <= n; i++){
+                result *= i;
+            }
+            return result;
+        };
+        int n = 4;
+        long result = f.applyAsInt(n);
+        System.out.println(result);
+
+        //9. Write a Java program to implement a lambda expression to create a lambda expression to check if a number is prime.
+
     }
 }
