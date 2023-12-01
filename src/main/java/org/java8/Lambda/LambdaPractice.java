@@ -102,5 +102,10 @@ public class LambdaPractice {
         int totalSum = list7.stream().reduce(0, (a,b) -> a+b);
         int totalProduct = list7.stream().reduce(1, (a,b) -> a*b);
         System.out.println(totalProduct+ " and "+ totalSum);
+
+        //13. Write a Java program to implement a lambda expression to count words in a sentence.
+        WordCounter wordCounter = i -> i.split(" ").length;
+        int count = wordCounter.countWords("Java lambda expression");
+        System.out.println(count);
     }
 }
