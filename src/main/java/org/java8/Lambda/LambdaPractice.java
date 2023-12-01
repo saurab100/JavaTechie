@@ -135,5 +135,11 @@ public class LambdaPractice {
         int small = list10.stream().mapToInt(String::length).min().orElse(0);
         int large = list10.stream().mapToInt(String::length).max().orElse(0);
         System.out.println(small + " " + large);
+
+        //18. Write a Java program to implement a lambda expression to check if a given number is a perfect square.
+
+        //19. Write a Java program to implement a lambda expression to find the second largest and smallest element in an array
+
+        //22. Write a Java program to implement a lambda expression to check if a list of strings are all uppercase or all lowercase or mixedcase.
     }
 }
