@@ -1,9 +1,6 @@
 package org.java8.Lambda;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 import java.util.function.*;
 import java.util.stream.Collectors;
 
@@ -99,13 +96,44 @@ public class LambdaPractice {
 
         //12. Write a Java program to create a lambda expression to multiply and sum all elements in a list of integers.
         List<Integer> list7 = Arrays.asList(2, 10, 4, 1, 5);
-        int totalSum = list7.stream().reduce(0, (a,b) -> a+b);
-        int totalProduct = list7.stream().reduce(1, (a,b) -> a*b);
-        System.out.println(totalProduct+ " and "+ totalSum);
+        int totalSum = list7.stream().reduce(0, (a, b) -> a + b);
+        int totalProduct = list7.stream().reduce(1, (a, b) -> a * b);
+        System.out.println(totalProduct + " and " + totalSum);
 
         //13. Write a Java program to implement a lambda expression to count words in a sentence.
         WordCounter wordCounter = i -> i.split(" ").length;
         int count = wordCounter.countWords("Java lambda expression");
         System.out.println(count);
+
+        //14. Write a Java program to implement a lambda expression to check if a given string is a palindrome.
+        Predicate<String> isPalindrome = s -> {
+            int i = 0;
+            int j = s.length() - 1;
+            while (i <= j) {
+                if (s.charAt(i) != s.charAt(j)) {
+                    return false;
+                }
+                i++;
+                j--;
+            }
+            return true;
+        };
+        Boolean palindrome = isPalindrome.test("s");
+        System.out.println("isPalindrome: " + palindrome);
+
+        //15. Write a Java program to implement a lambda expression to calculate the sum of squares of all odd and even numbers in a list.
+        List<Integer> list8 = Arrays.asList(2, 10, 4, 1, 5, 3, 11, 6);
+
+
+        //16. Write a Java program to implement a lambda expression to check if a list of strings contains a specific word.
+        List<String> list9 = Arrays.asList("saurabh", "saxena", "shruti", "shivang", "anish");
+        boolean isWord = list9.stream().anyMatch(s -> s.equalsIgnoreCase("dhruv"));
+        System.out.println("specific word: " + isWord);
+
+        //*17. Write a Java program to implement a lambda expression to find the length of the longest and smallest string in a list.
+        List<String> list10 = Arrays.asList("saurabh", "saxena", "mom", "shivang", "anish");
+        int small = list10.stream().mapToInt(String::length).min().orElse(0);
+        int large = list10.stream().mapToInt(String::length).max().orElse(0);
+        System.out.println(small + " " + large);
     }
 }
