@@ -24,5 +24,22 @@ public class StreamApiPractice {
         int oddSum = list2.stream().filter( i -> i%2 != 0).mapToInt(i -> i).sum();
         int evenSum = list2.stream().filter( i -> i%2 == 0).mapToInt(i -> i).sum();
         System.out.println(oddSum+ " : " +evenSum);
+
+        //4. Write a Java program to remove all duplicate elements from a list using streams.
+        List<Integer> list3 = Arrays.asList(1,2,3,4,5,2,4,8,6,5,3);
+        List<Integer> distinctList = list3.stream().distinct().collect(Collectors.toList());
+        System.out.println(distinctList);
+
+        //5. Write a Java program to count the number of strings in a list that start with a specific letter using streams.
+        List<String> list4 = Arrays.asList("saurabh","AAA","AsBc");
+        long count = list4.stream().filter(i -> i.startsWith("A")).count();
+        System.out.println(count);
+
+        //6. Write a Java program to sort a list of strings in alphabetical order, ascending and descending using streams.
+        List<String> list5 = Arrays.asList("s","a","c","k","b");
+        List<String> sortedList = list5.stream().sorted((o1,o2) -> o1.compareTo(o2)).collect(Collectors.toList());
+        List<String> sortedDescList = list5.stream().sorted((o1,o2) -> o2.compareTo(o1)).collect(Collectors.toList());
+        System.out.println(sortedList+ ": " + sortedDescList);
+
     }
 }
