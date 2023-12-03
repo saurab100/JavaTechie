@@ -41,5 +41,17 @@ public class StreamApiPractice {
         List<String> sortedDescList = list5.stream().sorted((o1,o2) -> o2.compareTo(o1)).collect(Collectors.toList());
         System.out.println(sortedList+ ": " + sortedDescList);
 
+        //7. Write a Java program to find the maximum and minimum values in a list of integers using streams.
+        List<Integer> list6 = Arrays.asList(1,2,3,4,5,2,4,8,6,5,3);
+        int max = list6.stream().max((o1, o2) -> o1.compareTo(o2)).get();
+        int min = list6.stream().min((o1, o2) -> o1.compareTo(o2)).get();
+        System.out.println(max+ ":"+min);
+
+        //8. Write a Java program to find the second smallest and largest elements in a list of integers using streams.
+        List<Integer> list7 = Arrays.asList(3,2,1,4,5,6,7,10,11,9);
+        int secondMax = list7.stream().sorted((o1, o2) -> o2.compareTo(o1)).skip(2).findFirst().orElse(null);
+        int secondMin = list7.stream().sorted((o1, o2) -> o1.compareTo(o2)).skip(1).findFirst().orElse(null);
+        System.out.println(secondMax+ ":"+secondMin);
+
     }
 }
