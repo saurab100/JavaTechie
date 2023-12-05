@@ -3,21 +3,22 @@ package org.CoreJava.Strings;
 public class Exercise {
 
     public static void main(String[] args) {
-        String s = "w3resource.com";
-        String x = "";
-        StringBuilder s2 = new StringBuilder();
-        char[] ch = s.toCharArray();
-        for(int i = 0 ; i<= s.length()-1; i++){
-            if(i%2 == 0){
-                x += s.charAt(i);
+
+        //31. Write a Java program to trim leading or trailing whitespace from a given string.
+        String s = " w3resource com ";
+        System.out.println("Length:" +s.length());
+        System.out.println("After trim: "+s.trim().length());
+
+        //38. Write a Java program to print the result of removing duplicates from a given string.
+        String s1 = "saaurabhb";
+        char[] ch = s1.toCharArray();
+        String duplicates = "";
+        for(char c: ch){
+            if (duplicates.indexOf(c) == -1){
+                duplicates += c;
             }
         }
-        for (char c: ch){
-            if(c != 'w'){
-                s2.append(c);
-            }
-        }
-        System.out.println(x);
-        System.out.println(s2.toString());
+        System.out.println(duplicates);
+
     }
 }
