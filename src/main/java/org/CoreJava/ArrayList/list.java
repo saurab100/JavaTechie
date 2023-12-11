@@ -1,4 +1,4 @@
-package org.CoreJava;
+package org.CoreJava.ArrayList;
 
 import java.util.*;
 import java.util.stream.Collectors;
