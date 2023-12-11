@@ -35,5 +35,9 @@ public class ArrayListPractice {
 
         //6. Write a Java program to reverse elements in an array list.
         Collections.reverse(list);
+
+        //7. Write a Java program that swaps two elements in an array list.
+        Collections.swap(list,0, 1);
+        System.out.println(list);
     }
 }
