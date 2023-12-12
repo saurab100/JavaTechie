@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.OptionalDouble;
 import java.util.function.IntUnaryOperator;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class LambdaPractice2 {
@@ -50,7 +51,22 @@ public class LambdaPractice2 {
         int prod = list6.stream().reduce(1, (a, b) -> a*b);
         System.out.println(sum+ ":"+ prod);
 
-
+        Predicate<String> predicate = s -> {
+          int i = 0;
+          int j = s.length()-1;
+          while(i <= j){
+              if(s.charAt(i) != s.charAt(j)){
+                  return false;
+              }
+              else {
+                  i++;
+                  j--;
+              }
+          }
+            return true;
+        };
+        boolean pali = predicate.test("Nitin");
+        System.out.println(pali);
 
 
     }

@@ -122,8 +122,10 @@ public class LambdaPractice {
         System.out.println("isPalindrome: " + palindrome);
 
         //15. Write a Java program to implement a lambda expression to calculate the sum of squares of all odd and even numbers in a list.
-        List<Integer> list8 = Arrays.asList(2, 10, 4, 1, 5, 3, 11, 6);
-
+        List<Integer> sq = Arrays.asList(2, 10, 4, 1, 5);
+        int sOdd = sq.stream().filter( i -> i % 2 != 0).mapToInt( i -> i*i).sum();
+        int sEven = sq.stream().filter(i -> i % 2 == 0).mapToInt(i -> i*i).sum();
+        System.out.println(sOdd+ ":"+ sEven);
 
         //16. Write a Java program to implement a lambda expression to check if a list of strings contains a specific word.
         List<String> list9 = Arrays.asList("saurabh", "saxena", "shruti", "shivang", "anish");

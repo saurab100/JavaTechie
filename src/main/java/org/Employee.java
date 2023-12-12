@@ -1,6 +1,0 @@
-package org;
-
-public class Employee {
-
-
-}
